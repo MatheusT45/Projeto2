@@ -75,8 +75,13 @@
     </div>
 </div> --}}
 
-
-<body class="bg-dark">
+<body class="hold-transition @yield('body_class')" 
+style=" background-image: url('{{asset('img/background-login.jpg')}}'); 
+no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; ">
 
         <div class="container">
           <div class="card card-register mx-auto mt-5">
@@ -150,5 +155,6 @@
             </div>
           </div>
         </div>
-      
+        
+      </body>
 @endsection

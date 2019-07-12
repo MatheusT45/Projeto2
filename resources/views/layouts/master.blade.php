@@ -18,9 +18,14 @@
   <link href="{{asset('datatables/dataTables.bootstrap4.css')}}" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
+  {{-- CSS Personalizado --}}
+  <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
+
+  
     {{-- navbar topo --}}
     @if(Auth::check())
     @include('layouts.navbar-admin')
@@ -83,7 +88,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="dropdown-item" href="{{ route('logout') }}"
+          <a class="btn btn-primary" href="{{ route('logout') }}"
           onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
            {{ __('Logout') }}
@@ -97,13 +102,12 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
+  <!-- Jquery-->
   <script src="{{asset('jquery/jquery.min.js')}}"></script>
+  {{-- Bootstrap --}}
   <script src="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
   <!-- Core plugin JavaScript-->
   <script src="{{asset('jquery-easing/jquery.easing.min.js')}}"></script>
-
   <!-- Custom scripts for all pages-->
   <script src="{{asset('js/sb-admin.js')}}"></script>
 </body>
