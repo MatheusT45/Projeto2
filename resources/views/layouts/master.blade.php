@@ -20,7 +20,8 @@
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
   {{-- CSS Personalizado --}}
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
+  {{-- Toastr --}}
+  <link href="{{asset('toastr/toastr.min.css')}}" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -110,6 +111,13 @@
   <script src="{{asset('jquery-easing/jquery.easing.min.js')}}"></script>
   <!-- Custom scripts for all pages-->
   <script src="{{asset('js/sb-admin.js')}}"></script>
+  {{-- Toastr --}}
+  <script src="{{asset('toastr/toastr.min.js')}}"></script>
+  {{-- Custom Scripts --}}
+  <script src="{{asset('js/functions.js')}}"></script>
+
+
+  @yield('js')
 </body>
 
 </html>
