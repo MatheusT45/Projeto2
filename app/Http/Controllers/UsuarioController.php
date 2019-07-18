@@ -41,7 +41,11 @@ class UsuarioController extends Controller
     public function listaUsuarios()
     {
         $users = User::all();
-        return view('usuarios.lista_usuarios',compact('users'));
+        $perfis = [
+            0   => 'Administrador',
+            1   => 'Básico'
+        ];
+        return view('usuarios.lista_usuarios',compact('users','perfis'));
     }
 }
     

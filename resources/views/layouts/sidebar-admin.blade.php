@@ -1,6 +1,6 @@
 <ul class="sidebar navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('home')}}">
+        <li class="nav-item {{ (request()->routeIs('home')) ? 'active' : '' }}">
+          <a class="nav-link "  href="{{route('home')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Home</span>
           </a>
@@ -12,7 +12,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <h6 class="dropdown-header">Cadastros</h6>
-            <a class="dropdown-item" href="#">Usuários</a>
+            <a class="dropdown-item {{ (request()->routeIs('lista_usuarios')) ? 'active' : '' }}" href="{{route('lista_usuarios')}}">Usuários</a>
             {{-- <div class="dropdown-divider"></div>
             <h6 class="dropdown-header">Other Pages:</h6>
             <a class="dropdown-item" href="404.html">404 Page</a>
