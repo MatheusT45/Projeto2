@@ -24,6 +24,14 @@ Route::post('atualiza_dados', 'UsuarioController@atualizaDados')->name('atualiza
 Auth::routes();
 
 /* fazer middleware de admin */
-Route::get('lista_usuarios','UsuarioController@listaUsuarios')->name('lista_usuarios');
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('lista_usuarios','UsuarioController@listaUsuarios')->name('lista_usuarios');
+    Route::get('incluir_usuario','UsuarioController@incluirUsuarios')->name('incluir_usuario');
+    Route::post('grava_usuario','UsuarioController@gravarUsuarios')->name('grava_usuario');
+    Route::get('editar_usuario/{id}','UsuarioController@editarUsuarios')->name('editar_usuario');
+    Route::post('atualizar_usuario','UsuarioController@atualizarUsuarios')->name('atualizar_usuario');
+    
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');

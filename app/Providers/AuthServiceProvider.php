@@ -24,7 +24,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-        //
+        //definindo gate para administradores
+        Gate::define('admin', function ($user) {
+            return $user->verificaAdm();
+        });
     }
 }

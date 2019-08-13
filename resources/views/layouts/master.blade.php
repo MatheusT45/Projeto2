@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Blank Page</title>
+  <title>Project Admin</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -24,6 +24,7 @@
   <link href="{{asset('toastr/toastr.min.css')}}" rel="stylesheet">
   {{-- Datatables --}}
   <link href="{{asset('DataTables-1.10.18/css/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
 
 </head>
 
@@ -120,6 +121,8 @@
   <script src="{{asset('js/functions.js')}}"></script>
   {{-- Datatables --}}
   <script src="{{asset('js/datatables.min.js')}}"></script>
+  {{-- Bootbox --}}
+  <script src="{{asset('bootbox/bootbox.all.min.js')}}"></script>
 
   @yield('js')
 </body>

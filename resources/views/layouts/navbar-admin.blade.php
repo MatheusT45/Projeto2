@@ -3,7 +3,7 @@
         <i class="fas fa-bars"></i>
       </button>
   
-    <a class="navbar-brand mr-1" href="{{route('home')}}">Project 2</a>
+    <a class="navbar-brand mr-1" href="{{route('home')}}">Project Admin</a>
 
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
