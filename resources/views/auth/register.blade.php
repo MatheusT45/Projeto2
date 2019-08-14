@@ -93,8 +93,8 @@ background-size: cover; ">
                   <div class="form-row">
                     <div class="col-md-12">
                       <div class="form-label-group">
-                        <input type="text" id="firstName" class="form-control @error('name') is-invalid @enderror" placeholder="Name" required="required" name="name" value="{{ old('name') }}" autocomplete="name" autofocus="autofocus">
-                        <label for="firstName">Name</label>
+                        <input type="text" id="firstName" class="form-control @error('name') is-invalid @enderror" placeholder="Nome" required="required" name="name" value="{{ old('name') }}" autocomplete="name" autofocus="autofocus">
+                        <label for="firstName">Nome</label>
                          @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -115,7 +115,7 @@ background-size: cover; ">
                 <div class="form-group">
                   <div class="form-label-group">
                     <input type="email" id="inputEmail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="E-mail" autocomplete="email">
-                    <label for="inputEmail">Email address</label>
+                    <label for="inputEmail">E-mail</label>
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
