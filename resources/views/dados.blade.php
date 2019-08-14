@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                       
-                        <div class="input-group">
+                        <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                   <div class="input-group-text"><i class="fa fa-user"></i></div>
                                 </div>
@@ -48,7 +48,7 @@
                               </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="input-group">
+                        <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fa fa-at"></i></div>
                                 </div>
@@ -60,7 +60,7 @@
                 <label><b>Alterar senha</b></label>
                  <div class="row">
                     <div class="col-lg-6">
-                        <div class="input-group">
+                        <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fa fa-lock"></i></div>
                                       </div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="input-group">
+                        <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fa fa-check"></i></div>
                                       </div>

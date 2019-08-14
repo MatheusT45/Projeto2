@@ -30,6 +30,9 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('grava_usuario','UsuarioController@gravarUsuarios')->name('grava_usuario');
     Route::get('editar_usuario/{id}','UsuarioController@editarUsuarios')->name('editar_usuario');
     Route::post('atualizar_usuario','UsuarioController@atualizarUsuarios')->name('atualizar_usuario');
+    Route::get('excluir_usuario/{id}','UsuarioController@excluirUsuarios')->name('excluir_usuario');
+    Route::get('retornar_usuario/{id}','UsuarioController@retornarUsuarios')->name('retornar_usuario');
+    
     
 });
 

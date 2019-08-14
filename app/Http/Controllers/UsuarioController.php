@@ -48,13 +48,18 @@ class UsuarioController extends Controller
 
     public function listaUsuarios()
     {
+        /* todos os usuarios */
         $users = User::all();
+        /* usuarios excluidos */
+        $users_exc = User::onlyTrashed()->get();
         $perfis = [
             0   => 'Administrador',
             1   => 'Básico'
         ];
-        return view('usuarios.lista_usuarios',compact('users','perfis'));
+        return view('usuarios.lista_usuarios',compact('users','perfis','users_exc'));
     }
+
+
     public function incluirUsuarios()
     {
         return view('usuarios.incluir_usuarios',compact('perfis'));
@@ -68,10 +73,10 @@ class UsuarioController extends Controller
             'tipo' => 'required',
             'password' => 'required|confirmed|min:8',
         ]);
+
         $dados = $request->all();
         
         $dados['password'] =  Hash::make($dados['password']);
-        //tenta salvar o usuário no banco
         try{
             User::create($dados);
         }catch(\PDOException $e){
@@ -102,19 +107,17 @@ class UsuarioController extends Controller
         ]);
         $dados = $request->all();
         
-        //atualização dos dados cadastrais
         $user           = User::find($dados['user_id']);
         $user->name     = $dados['name'];
         $user->email    = $dados['email'];
         $user->tipo     = $dados['tipo'];
 
-        //atualiza a senha se ela foi mandada
         if(!is_null($request->password))
         {
             $dados['password'] = bcrypt($dados['password']);
             $user->password = $dados['password'];
         }
-        //tenta salvar o usuário no banco
+
         try{
             $user->save();
         }catch(\PDOException $e){
@@ -123,6 +126,24 @@ class UsuarioController extends Controller
         
         return back()->withSuccess('Usuário alterado com sucesso!');
     }
+
+    public function excluirUsuarios($id)
+    {
+        if(auth()->user()->id == $id)
+        {
+            return back()->withErro('Você não pode excluir você mesmo!');
+        }
+        User::find($id)->delete();
+        return back()->withSuccess('Usuário Excluído com sucesso!');
+    }
+    public function retornarUsuarios($id)
+    {
+        User::onlyTrashed()->find($id)->restore();
+        return back()->withSuccess('Usuário Restaurado com sucesso!');
+    }
+    
+
+    
 }
     
 

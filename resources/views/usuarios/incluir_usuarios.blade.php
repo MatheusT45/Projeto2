@@ -34,54 +34,53 @@
         @csrf
                 
         <div class="card">
-                <div class="card-header"> Novo Usuário </div>
-                <div class="card-body">
+            <div class="card-header"> Novo Usuário </div>
+            <div class="card-body">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="input-group">
-                                <div class="input-group-prepend">
-                                  <div class="input-group-text"><i class="fa fa-user"></i></div>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Nome" name="name"  required>
-                              </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Nome" name="name"  required>
+                        </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="input-group">
-                                <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-at"></i></div>
-                                </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-at"></i></div>
+                            </div>
                             <input type="text" class="form-control" placeholder="E-mail" name="email"  required>
                         </div>
                     </div>
-
                     <div class="col-lg-4">
-                            <div class="input-group">
-                                    <div class="input-group-prepend">
-                                            <div class="input-group-text"><i class="fa fa-id-badge"></i></div>
-                                    </div>
-                                    <select class="form-control" placeholder="Tipo" name="tipo"  required>
-                                        <option selected disabled>Selecione...</option>
-                                        <option value="0">Administrador</option>
-                                        <option value="1">Básico</option>
-                                    </select>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-id-badge"></i></div>
                             </div>
+                            <select class="form-control" placeholder="Tipo" name="tipo"  required>
+                                <option selected disabled>Selecione...</option>
+                                <option value="0">Administrador</option>
+                                <option value="1">Básico</option>
+                            </select>
                         </div>
+                    </div>
 
                 </div><br>
-                 <div class="row">
+                <div class="row">
                     <div class="col-lg-6">
-                        <div class="input-group">
-                                <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-lock"></i></div>
-                                      </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                            </div>
                             <input type="password" class="form-control" placeholder="Senha" name="password" required >
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="input-group">
-                                <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-check"></i></div>
-                                      </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-check"></i></div>
+                            </div>
                             <input type="password" class="form-control" placeholder="Confirme sua senha"  name="password_confirmation" required>
                         </div>
                     </div>
